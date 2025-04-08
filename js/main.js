@@ -58,11 +58,27 @@ btnMostrar.addEventListener("click", function(event){
     //listas.item(0).prepend(element2);
 
 // append Inserta el elento al final de la lista
-    listas.item(0).append(element);
+  //listas.item(0).append(element);
     
 //after Inserta el elemento despues de la lista 
-    listas.item(0).after(element2);
+    //listas.item(0).after(element2);
+    
 
+//Afterbegin Inserta el elemento al principio de la lista 
+    //listas.item(1).insertAdjacentElement("afterbegin", element);
+//Beforeed Inserta el elento al final de la lista
+    //listas.item(1).insertAdjacentElement("beforeend", element2);
+
+
+    listas.item(1).insertAdjacentHTML("beforebegin", `<li class ="list-group-item"> Before Begin item</li>`);
+
+    listas.item(1).insertAdjacentHTML("afterend", `<li class ="list-group-item">Another new item</li>`);
+
+    listas.item(1).insertAdjacentHTML("afterbegin", `<li class ="list-group-item">Another new item</li>`);
+
+    listas.item(1).insertAdjacentHTML("beforeed", `<li class ="list-group-item"> Before Begin item</li>`);
+
+    
 
 });
 
