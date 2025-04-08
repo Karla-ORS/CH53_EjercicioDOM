@@ -17,4 +17,5 @@ git commit -m "mensaje"
 git push origin main
 ```
 >Vista previa del index.html
+
 ![Index](https://raw.githubusercontent.com/Karla-ORS/CH53_EjercicioDOM/refs/heads/main/Imagen/Captura%20de%20pantalla%202025-04-08%20104307.png)
