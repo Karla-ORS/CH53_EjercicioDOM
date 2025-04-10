@@ -3,6 +3,10 @@ let btnMostrar = document.getElementById("btnMostrar");
 let encabezado1 = document.getElementById("encabezado1");
 let encabezado2 = document.getElementById("encabezado2");
 let listas = document.getElementsByTagName("ul"); 
+let txtRFC = document.getElementById("txtRFC");
+let txtTelefono = document.getElementById("txtTelefono");
+let txtCURP = document.getElementById("txtCURP");
+
 
 let elementos = document.getElementsByClassName("list-group-item");
 
@@ -70,18 +74,53 @@ btnMostrar.addEventListener("click", function(event){
     //listas.item(1).insertAdjacentElement("beforeend", element2);
 
 
-    listas.item(1).insertAdjacentHTML("beforebegin", `<li class ="list-group-item"> Before Begin item</li>`);
+    //listas.item(1).insertAdjacentHTML("beforebegin", `<li class ="list-group-item"> Before Begin item</li>`);
 
-    listas.item(1).insertAdjacentHTML("afterend", `<li class ="list-group-item">Another new item</li>`);
+    //listas.item(1).insertAdjacentHTML("afterend", `<li class ="list-group-item">Another new item</li>`);
 
-    listas.item(1).insertAdjacentHTML("afterbegin", `<li class ="list-group-item">Another new item</li>`);
+    //listas.item(1).insertAdjacentHTML("afterbegin", `<li class ="list-group-item">Another new item</li>`);
 
-    listas.item(1).insertAdjacentHTML("beforeed", `<li class ="list-group-item"> Before Begin item</li>`);
-
-    
+    //listas.item(1).insertAdjacentHTML("beforeed", `<li class ="list-group-item"> Before Begin item</li>`);
 
 });
+// Se ejecuta cuando termina de cargar todos los elementos de la pagina
+window.addEventListener("load",function(event){
+    console.log("se termino de cargar la pagina");
 
+}); //load
+ 
+///////////////////////////////////////////////////////////////////////////////////////////
+
+//FORMA MAS COMPLETA SIN AUTOMATIZACION
+
+//Blur ----> cuando se sale del campo (perder el foco)
+//txtRFC.addEventListener("blur", function (event){
+  //  event.preventDefault();
+    //txtRFC.value = txtRFC.value.toUpperCase();  // ---> toUpperCase --->Conversion en mayusculas aplicado en el mismo campo 
+    //}); //txtRFC
+
+//txtCURP.addEventListener("blur", function (event){
+  //  event.preventDefault();
+    //txtCURP.value = txtCURP.value.toUpperCase();
+//}); //CURP
+
+//txtTelefono.addEventListener("blur", function (event){
+  //  event.preventDefault();
+    //txtTelefono.value = txtTelefono.value.trim (0, 10);
+//}); // Telefono
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//FORMA MAS AUTOMATIZADA CON MENOS CODIGO MISMA FUNCION
+
+function txtToUpper(event){
+    event.target.value =event.target.value.toUpperCase();
+} //txtToUpper
+txtRFC.addEventListener("blur",txtToUpper); //txtRFC
+txtCURP.addEventListener("blur",txtToUpper); //txtCURP
+
+
+//////////////////////////////////////////////////////////////////////////////////////// 
 
 
 
